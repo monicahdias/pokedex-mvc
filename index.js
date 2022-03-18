@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-
+const port = process.env.PORT || 3000;
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded());
@@ -41,38 +41,53 @@ const pokedex = [
   },
 ];
 let pokemon = undefined;
+let nextId = 5;
+
 //rotas
 app.get("/", (req, res) => {
-  res.render("index", { pokedex, pokemon  });
+  res.render("index", { pokedex, pokemon });
+});
+app.get("/novidades", (req, res) => {
+  res.render("novidades")
+});
+app.get("/musicas", (req, res) => {
+  res.render("musicas")
 });
 
 app.post("/cadastro", (req, res) => {
-   pokemon = req.body;
-  pokemon.id = pokedex.length +1;
-  pokedex.push(pokemon)
-  pokemon=undefined;
+  pokemon = req.body;
+  pokemon.id = nextId++;
+  pokedex.push(pokemon);
+  pokemon = undefined;
   res.redirect("/#cards");
 });
-app.get("/detalhes/:id",(req, res) =>{
-  const id = +req.params.id;
-  pokemon =  pokedex.find(pokemon => pokemon.id == id);
-  res.redirect("/#cadastro");
-})
-app.post("/atualizar/:id", (req, res) =>{
-  const id = +req.params.id -1;
- const newPokemon = req.body;
- newPokemon.id=id+1;
- pokedex[id] = newPokemon;
- pokemon = undefined;
- res.redirect("/#cards");
-})
-app.get("/deletar/:id", (req, res) =>{
-  const id = +req.params.id -1;
-  delete pokedex[id];
-  pokemon=undefined;
-  res.redirect("/#cards");
-})
 
-app.listen(3000, () =>
-  console.log(`servidor rodando em: http://localhost:3000`)
+app.get("/detalhes/(:id)?", (req, res) => {
+  const id = +req.params.id;
+  pokemon = pokedex.find((pokemon) => {
+    if(pokemon){
+    pokemon.id == id
+    }
+  });
+  res.render("cadastro", { Pokemon: pokemon, Pokedex: pokedex });
+});
+
+app.post("/atualizar/:id", (req, res) => {
+  const id = +req.params.id;
+  const newPokemon = req.body;
+  newPokemon.id = id;
+  pokedex[id] = newPokemon;
+  pokemon = undefined;
+  res.redirect("/#cards");
+});
+
+app.get("/deletar/:id", (req, res) => {
+  const id = +req.params.id;
+  delete pokedex[id];
+  pokemon = undefined;
+  res.redirect("/#cards");
+});
+
+app.listen(port, () =>
+  console.log(`servidor rodando em: http://localhost:${port}`)
 );
