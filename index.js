@@ -44,12 +44,15 @@ let pokemon = undefined;
 let nextId = 5;
 
 //rotas
+
 app.get("/", (req, res) => {
   res.render("index", { pokedex, pokemon });
 });
+
 app.get("/novidades", (req, res) => {
   res.render("novidades")
 });
+
 app.get("/musicas", (req, res) => {
   res.render("musicas")
 });
