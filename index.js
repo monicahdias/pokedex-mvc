@@ -40,18 +40,38 @@ const pokedex = [
     imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png",
   },
 ];
-
+let pokemon = undefined;
 //rotas
 app.get("/", (req, res) => {
-  res.render("index", { pokedex });
+  res.render("index", { pokedex, pokemon  });
 });
 
 app.post("/cadastro", (req, res) => {
-  const pokemon = req.body;
+   pokemon = req.body;
+  pokemon.id = pokedex.length +1;
   pokedex.push(pokemon)
-  
-  res.redirect("/");
+  pokemon=undefined;
+  res.redirect("/#cards");
 });
+app.get("/detalhes/:id",(req, res) =>{
+  const id = +req.params.id;
+  pokemon =  pokedex.find(pokemon => pokemon.id == id);
+  res.redirect("/#cadastro");
+})
+app.post("/atualizar/:id", (req, res) =>{
+  const id = +req.params.id -1;
+ const newPokemon = req.body;
+ newPokemon.id=id+1;
+ pokedex[id] = newPokemon;
+ pokemon = undefined;
+ res.redirect("/#cards");
+})
+app.get("/deletar/:id", (req, res) =>{
+  const id = +req.params.id -1;
+  delete pokedex[id];
+  pokemon=undefined;
+  res.redirect("/#cards");
+})
 
 app.listen(3000, () =>
   console.log(`servidor rodando em: http://localhost:3000`)
