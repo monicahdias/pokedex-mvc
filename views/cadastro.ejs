@@ -45,7 +45,7 @@
     </form>
     <% } else{ %>
       <h2>Atualize o Pokémon</h2>
-    <form action="/atualizar/<%= Pokedex.indexOf(Pokemon) %>" method="POST">
+    <form action="/atualizar/<%= Pokedex.indexOf(Pokemon) %>" method="GET">
       <label for="nome">Nome:</label>
       <input type="text" id="nome" name="nome" value="<%= Pokemon.nome %>" required>
 
