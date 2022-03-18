@@ -72,7 +72,7 @@ app.get("/detalhes/(:id)?", (req, res) => {
   res.render("cadastro", { Pokemon: pokemon, Pokedex: pokedex });
 });
 
-app.get("/atualizar/:id", (req, res) => {
+app.post("/atualizar/:id", (req, res) => {
   const id = +req.params.id;
   const newPokemon = req.body;
   newPokemon.id = id;
