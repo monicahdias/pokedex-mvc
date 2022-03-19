@@ -66,12 +66,8 @@ app.post("/cadastro", (req, res) => {
 });
 
 app.get("/detalhes/(:id)?", (req, res) => {
-  const id = +req.params.id;
-  pokemon = pokedex.find((pokemon) => {
-    if(pokemon){
-    pokemon.id == id
-    }
-  });
+  const idPokemon = +req.params.id;
+  pokemon = pokedex.find(pokemon =>pokemon.id==idPokemon);
   res.render("cadastro", { Pokemon: pokemon, Pokedex: pokedex });
 });
 
