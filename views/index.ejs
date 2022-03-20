@@ -8,53 +8,55 @@
     <title>Pokédex</title>
   </head>
   <body>
-
     <nav>
+      <input type="checkbox" id="nav" class="hidden"/>
+      <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
+      <div class="nav-container">
+        <a href="/"><img src="/img/ICON.png" alt=""></a>
         <ul>
           
-          <li><img src="/img/ICON.png" alt=""></li>
-          <li><a href="/"><h1>POKÉDEX</h1></a></li>
           <li><a href="/detalhes/">CADASTRAR</a></li>
-          <li><a href="#cards">POKEMON</a></li>
+          <li><a href="/#cards">POKEMON</a></li>
           <li><a href="/curiosidade">CURIOSIDADE</a></li>
           <li><a href="/musicas">MÚSICAS</a></li>
-        
         </ul>
+      </div>
     </nav>
-    <header>
-      <img src="/img/background.png" alt="banner">
-    </header>
+
     <main>
- 
       <section id="cards">
-        <h2>Lista de Pokemon</h2>
+        <h1>Pokédex</h1>
         <% pokedex.forEach((pokemon) =>{ %>
         <div class="card">
           <img src="<%= pokemon.imagem %>" alt="pokemon" />
           <h3><%= pokemon.nome %></h3>
           <div>
-          <p class="descricao">DESCRIÇÃO: <%= pokemon.descricao %></p>
-        </div>
-        <div>
-          <p>TIPO: <%= pokemon.tipo %></p>
-        </div>
+            <p class="descricao">DESCRIÇÃO: <%= pokemon.descricao %></p>
+          </div>
+          <div>
+            <p>TIPO: <%= pokemon.tipo %></p>
+          </div>
           <a id="editar" href="/detalhes/<%= pokemon.id %>">Editar</a>
-          <a id="deletar" href="/deletar/<%= pokedex.indexOf(pokemon) %>">Deletar</a>
+          <a id="deletar" href="/deletar/<%= pokedex.indexOf(pokemon) %>"
+            >Deletar</a
+          >
         </div>
         <% }) %>
       </section>
-
-      
     </main>
     <footer id="rodape">
       <div id="linkB">
-        <a class="linkedin" href="https://www.linkedin.com/in/kellbber-barcarolo-71a848230/ " target="_blank"> Kellbber Barcarolo </a>
+        <a
+          class="linkedin"
+          href="https://www.linkedin.com/in/kellbber-barcarolo-71a848230/ "
+          target="_blank"
+        >
+          Kellbber Barcarolo
+        </a>
       </div>
       <div id="p">
-      <p>
-        - Todos os direitos reservados &copy;
-        </p>
+        <p>- Todos os direitos reservados &copy;</p>
       </div>
-</footer>
+    </footer>
   </body>
 </html>

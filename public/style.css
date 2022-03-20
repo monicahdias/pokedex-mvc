@@ -4,205 +4,243 @@
   padding: 0;
   font-family: "Roboto", Arial, sans-serif;
   scroll-behavior: smooth;
+  outline: 0;
+  box-sizing: border-box;
 }
-html,
-body {
+body{
   width: 100vw;
   height: 100vh;
-  flex-wrap: wrap;
-}
-nav {
-  background-color: black;
-  width: 100%;
-  position: fixed;
-}
-nav img{
-  width: 3rem;
-}
-nav ul {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  
-}
-nav ul li{
-  padding: 0.6rem;
-}
-nav ul li a{
-    text-decoration: none;
-    color: white;
-}
-nav h1 {
-  color: #fff;
-  font-size: 2rem;
-}
-header img{
-    margin-top: 3rem;
-    width: 100%;
-}
-main {
-  margin: 5rem 10rem 0 10rem;
-  background-color: rgb(124, 122, 122);
-  border-radius: 10%;
-  border: solid 2px gray;
-}
-section#cards {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  margin-top: 5rem;
-}
-
-section#cards div.card {
   display: flex;
   flex-direction: column;
-  width: 35%;
-  padding: 1rem;
-  margin: 3rem 0 5rem 0;
-  background-color: #fff;
-  border-radius: 20%;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+}
+nav {
+  background-image: url("/img/background.png");
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: cover;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+}
+nav ul {
+  float: right;
+}
+nav img{
+  display: flex;
+  width: 5%;
+  justify-content: flex-start;
+  align-self: center;
+}
+nav ul li {
+  display: inline-block;
+  float: left;
+}
+nav ul li:not(:first-child) {
+  margin-left: 25px;
+}
+nav ul li a {
+  display: inline-block;
+  outline: none;
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+nav ul li a:hover {
+  color: #a10505;
+  text-decoration: none;
+}
+@media screen and (max-width: 560px) {
+  .nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: #161414;
+    opacity: 0;
+    transition: all 0.2s ease;
+  }
+  .nav-container ul {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+  }
+  .nav-container ul li {
+    display: block;
+    float: none;
+    width: 100%;
+    text-align: right;
+    margin-bottom: 10px;
+  }
+  .nav-container ul li:nth-child(1) a {
+    transition-delay: 0.2s;
+  }
+  .nav-container ul li:nth-child(2) a {
+    transition-delay: 0.3s;
+  }
+  .nav-container ul li:nth-child(3) a {
+    transition-delay: 0.4s;
+  }
+  .nav-container ul li:nth-child(4) a {
+    transition-delay: 0.5s;
+  }
+  .nav-container ul li:not(:first-child) {
+    margin-left: 0;
+  }
+  .nav-container ul li a {
+    padding: 10px 25px;
+    opacity: 0;
+    color: rgb(253, 253, 253);
+    font-size: 24px;
+    font-weight: 600;
+    transform: translateY(-20px);
+    transition: all 0.2s ease;
+  }
+  .nav-open {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    display: block;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    z-index: 9999;
+    border-radius: 50%;
+  }
+  .nav-open i {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #f10101;
+    border-radius: 2px;
+    margin-left: 14px;
+  }
+  .nav-open i:nth-child(1) {
+    margin-top: 16px;
+  }
+  .nav-open i:nth-child(2) {
+    margin-top: 4px;
+    opacity: 1;
+  }
+  .nav-open i:nth-child(3) {
+    margin-top: 4px;
+  }
+}
+#nav:checked + .nav-open {
+  transform: rotate(45deg);
+}
+#nav:checked + .nav-open i {
+  background: #fff;
+  transition: transform 0.2s ease;
+}
+#nav:checked + .nav-open i:nth-child(1) {
+  transform: translateY(6px) rotate(180deg);
+}
+#nav:checked + .nav-open i:nth-child(2) {
+  opacity: 0;
+}
+#nav:checked + .nav-open i:nth-child(3) {
+  transform: translateY(-6px) rotate(90deg);
+}
+#nav:checked ~ .nav-container {
+  z-index: 9990;
+  opacity: 1;
+}
+#nav:checked ~ .nav-container ul li a {
+  opacity: 1;
+  transform: translateY(0);
+}
+.hidden {
+  display: none;
+}
+main{
+  width: 100%;
+  display: flex;
+  padding:5% 10% 10% 10%;
+
 }
 
-section#cards div.card a#editar {
-  padding: 0.6rem;
-  width: 20%;
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  font-size: 1rem;
-  background-color: #fff;
-  border: solid 1px #0077ff;
-  color: #0077ff;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  text-decoration: none;
-  margin-top: 2rem;
-}
-section#cards div.card a#deletar {
-    padding: 0.6rem;
-    width: 20%;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    font-size: 1rem;
-    background-color: #fff;
-    border: solid 1px #ff0000;
-    color: #ff0000;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    text-decoration: none;
-    margin-top: 1rem;
-  }
-section#cards div.card a#editar:hover {
-  background-color: #0077ff;
+main h1{
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
   color: #fff;
 }
-section#cards div.card a#deletar:hover {
-    background-color: #ff0000;
-    color: #fff;
-  }
-
-section#cards div.card img {
-  margin-top: 1rem;
-  width: 45%;
-  transition: 1s ease-in-out;
-  flex-wrap: wrap;
-}
-
-section#cards div.card img:hover {
-  transform: scale(1.1);
-}
-section#cards h2 {
+#cards h1{
   width: 100%;
-  min-width: none;
-  text-align: center;
-  flex-wrap: wrap;
 }
-
-section#cards div.card h3 {
-  margin-bottom: 1rem;
-  text-align: center;
-  width: 100%;
-  min-width: none;
-}
-section#cards div.card p.descricao {
-  margin-bottom: 1rem;
-}
-section#cadastro {
+#cards{
   display: flex;
+  background-color: rgb(61, 53, 53);
+  border-radius: 20px;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: flex-start;
   justify-content: center;
-  padding: 5rem;
-}
-section#cadastro img {
-  flex-wrap: wrap;
-  width: 100%;
-}
-section#cadastro h2 {
-  width: 100%;
-  text-align: center;
-  padding-bottom: 5rem;
-  color: black;
-}
-section#cadastro form {
-  width: 100%;
-}
-section#cadastro form input {
-  width: 100%;
-  min-width: none;
-  padding: 0.7rem;
-  font-size: 1rem;
-  outline: none;
-  border: solid 2px rgb(197 197 197);
-  margin: 0 1rem 1rem 1rem;
-  flex-wrap: wrap;
-}
 
-section#cadastro form label {
-  margin: 1rem;
-  color: rgb(56, 51, 51);
 }
-section#cadastro form button {
-  padding: 0.6rem;
-  max-width: 100%;
-  min-width: none;
+.card{
+  background-color: #fff;
+  border: solid 5px rgb(0, 0, 0);
+  border-radius: 10%;
+  width: 200px;
+  height: 350px;
+  margin: 15px 30px 15px 30px;
   display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  font-size: 1rem;
-  background-color: white;
-  border: solid 1px red;
-  color: red;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  flex-wrap: wrap;
-}
-section#cadastro form button:hover {
-  background-color: red;
-  color: white;
-}
-#rodape {
-  margin: 7rem 0;
   align-items: center;
-  display: flex;
-  width: 100%;
-  color: white;
-  background-color: black;
-  font-size: 1rem;
-  flex-wrap: wrap;
-  min-height: 5%;
-}
-#rodape a {
-  display: flex;
-  justify-content: flex-end;
-  text-decoration: none;
+  justify-content: center;
+  flex-direction: column;
+  transition: .5s ease-in-out;
 }
 
-#linkB {
-  display: flex;
-  justify-content: flex-end;
-  width: 48%;
-  margin-right: 5px;
+.card h3{
+  text-align: center;
+}
+.card p{
+  text-align: center;
+}
+.card img{
+
+  align-items: center;
+  width: 40%;
+}
+#editar{
+  text-decoration: none;
+  color: rgb(251, 251, 251);
+  background-color: rgb(11, 126, 59);
+  font-size: 1rem;
+  font-weight: 800;
+  width: 50%;
+  text-align: center;
+  margin-top: 1rem;
+  border: solid 3px rgb(56, 56, 158);
+  
+}
+#editar:hover{
+  background-color: rgb(255, 255, 255);
+  color: rgb(11, 126, 59);
+  font-size: 1rem;
+  font-weight: 800;
+  border: solid 3px rgb(56, 56, 158);
+}
+#deletar{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 0, 0);
+  font-size: 1rem;
+  font-weight: 800;
+  width: 50%;
+  text-align: center;
+  margin-top: 1rem;
+  border: solid 3px rgb(56, 56, 158);
+  margin-bottom: 1rem;
+}
+#deletar:hover{
+  background-color: rgb(253, 253, 253);
+  color: rgb(255, 0, 0);
+  font-size: 1rem;
+  font-weight: 800;
+  border: solid 3px rgb(56, 56, 158);
 }
