@@ -49,8 +49,8 @@ app.get("/", (req, res) => {
   res.render("index", { pokedex, pokemon });
 });
 
-app.get("/novidades", (req, res) => {
-  res.render("novidades")
+app.get("/curiosidade", (req, res) => {
+  res.render("curiosidade")
 });
 
 app.get("/musicas", (req, res) => {
