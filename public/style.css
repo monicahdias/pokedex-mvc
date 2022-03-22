@@ -7,7 +7,7 @@
   outline: 0;
   box-sizing: border-box;
 }
-body{
+body {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -16,19 +16,21 @@ body{
 nav {
   background-image: url("/img/background.png");
   background-repeat: no-repeat;
-  background-position:center;
+  background-position: center;
   background-size: cover;
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: "Helvetica Neue", sans-serif;
   font-weight: 400;
 }
 nav ul {
   float: right;
+  margin-right: 0.5rem;
 }
-nav img{
+nav img {
   display: flex;
   width: 5%;
   justify-content: flex-start;
   align-self: center;
+  padding: 0.5rem;
 }
 nav ul li {
   display: inline-block;
@@ -155,23 +157,22 @@ nav ul li a:hover {
 .hidden {
   display: none;
 }
-main{
+main {
   width: 100%;
   display: flex;
-  padding:5% 10% 10% 10%;
-
+  padding: 5% 10% 10% 10%;
 }
 
-main h1{
+main h1 {
   text-align: center;
   margin-top: 1rem;
   margin-bottom: 2rem;
   color: #fff;
 }
-#cards h1{
+#cards h1 {
   width: 100%;
 }
-#cards{
+#cards {
   display: flex;
   background-color: rgb(61, 53, 53);
   border-radius: 20px;
@@ -179,34 +180,36 @@ main h1{
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: center;
-
 }
-.card{
+.card {
   background-color: #fff;
   border: solid 5px rgb(0, 0, 0);
   border-radius: 10%;
-  width: 200px;
-  height: 350px;
+  width: 300px;
+  height: 450px;
   margin: 15px 30px 15px 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  transition: .5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
-.card h3{
+.card h3 {
   text-align: center;
 }
-.card p{
+.card p {
   text-align: center;
+  font-size: 0.8rem;
 }
-.card img{
-
+.card img {
   align-items: center;
-  width: 40%;
+  width: 50%;
 }
-#editar{
+#cards .card .descricao {
+  padding: 0.5rem;
+}
+#editar {
   text-decoration: none;
   color: rgb(251, 251, 251);
   background-color: rgb(11, 126, 59);
@@ -216,16 +219,15 @@ main h1{
   text-align: center;
   margin-top: 1rem;
   border: solid 3px rgb(56, 56, 158);
-  
 }
-#editar:hover{
+#editar:hover {
   background-color: rgb(255, 255, 255);
   color: rgb(11, 126, 59);
   font-size: 1rem;
   font-weight: 800;
   border: solid 3px rgb(56, 56, 158);
 }
-#deletar{
+#deletar {
   text-decoration: none;
   color: rgb(255, 255, 255);
   background-color: rgb(255, 0, 0);
@@ -237,10 +239,44 @@ main h1{
   border: solid 3px rgb(56, 56, 158);
   margin-bottom: 1rem;
 }
-#deletar:hover{
+#deletar:hover {
   background-color: rgb(253, 253, 253);
   color: rgb(255, 0, 0);
   font-size: 1rem;
   font-weight: 800;
   border: solid 3px rgb(56, 56, 158);
+}
+
+#cadastro {
+  display: flex;
+  background-color: rgb(61, 53, 53);
+  border-radius: 20px;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1rem;
+}
+
+#cadastro h2 {
+  padding: 1rem;
+  text-align: center;
+  color: #fff;
+}
+#cadastro img {
+  display: flex;
+  width: 50%;
+}
+
+form {
+  column-count: 2;
+}
+
+form label {
+  padding: 0.2rem;
+  color: #fff;
+}
+
+footer {
+  text-align: center;
 }

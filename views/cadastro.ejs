@@ -4,17 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style.css"/>
+    <link rel="stylesheet" href="/style.css" />
     <title>Pokedex</title>
   </head>
   <body>
     <nav>
-      <input type="checkbox" id="nav" class="hidden"/>
+      <input type="checkbox" id="nav" class="hidden" />
       <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
       <div class="nav-container">
-        <a href="/"><img src="/img/ICON.png" alt=""></a>
+        <a href="/"><img src="/img/ICON.png" alt="" /></a>
         <ul>
-          
           <li><a href="/detalhes/">CADASTRAR</a></li>
           <li><a href="/#cards">POKEMON</a></li>
           <li><a href="/curiosidade">CURIOSIDADE</a></li>
@@ -24,57 +23,120 @@
     </nav>
 
     <main>
-<section id="cadastro">
-    <img src="/img/pokedexhome.png" alt="">
-    <div>
-    <% if(Pokemon == undefined) { %>
-      <h2>Cadastre um novo Pokémon!</h2>
-    <form action="/cadastro" method="POST">
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome" required>
-      <div id="lugarDescricao">
-      <label for="descricao">Descrição:</label>
-      <input type="text" id="descricao" name="descricao" required>
-    </div>
-      <label for="tipo">Tipo:</label>
-      <input type="text" id="tipo" name="tipo" required>
+      <section id="cadastro">
+        <img src="/img/pokedexhome.png" alt="" />
+        <div>
+          <% if(Pokemon == undefined) { %>
+          <h2>Cadastre um novo Pokémon!</h2>
+          <form action="/cadastro" method="POST">
+            <div id="cadastroNome">
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome" name="nome" required />
+            </div>
 
-      <label for="imagem">Link da imagem:</label>
-      <input type="text" id="imagem" name="imagem" required>
+            <div id="lugarDescricao">
+              <label for="descricao">Descrição:</label>
+              <input type="text" id="descricao" name="descricao" required />
+            </div>
 
-      <button id="btnCadastrar" type="submit">Cadastrar</button>
+            <div id="cadastroTipo">
+              <label for="tipo">Tipo:</label>
+              <input type="text" id="tipo" name="tipo" required />
+            </div>
 
-    </form>
-    <% } else{ %>
-      <h2>Atualize o Pokémon</h2>
-    <form action="/atualizar/<%= Pokedex.indexOf(Pokemon) %>" method="POST">
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome" value="<%= Pokemon.nome %>" required>
+            <div id="cadastroAltura">
+              <label for="altura">Altura:</label>
+              <input type="text" id="altura" name="altura" required />
+            </div>
 
-      <label for="descricao">Descrição:</label>
-      <input type="text" id="descricao" name="descricao" value="<%= Pokemon.descricao %>" required>
+            <div id="cadastroPeso">
+              <label for="peso">Peso:</label>
+              <input type="text" id="peso" name="peso" required />
+            </div>
 
-      <label for="tipo">Tipo:</label>
-      <input type="text" id="tipo" name="tipo" value="<%= Pokemon.tipo %>" required>
+            <div id="cadastroCategoria">
+              <label for="categoria">Categoria:</label>
+              <input type="text" id="categoria" name="categoria" required />
+            </div>
 
-      <label for="imagem">Link da imagem:</label>
-      <input type="text" id="imagem" name="imagem" value="<%= Pokemon.imagem %>" required>
+            <div id="cadastroHabilidade">
+              <label for="habilidade">Habilidade:</label>
+              <input type="text" id="habilidade" name="habilidade" required />
+            </div>
 
-      <button id="btnAtualizar" type="submit">Atualizar</button>
-      
-    </form>
-    <% } %>
-  </div>
-  </section>
+            <div id="cadastroFraquezas">
+              <label for="fraquezas">Fraquezas:</label>
+              <input type="text" id="fraquezas" name="fraquezas" required />
+            </div>
+
+            <div id="cadastroImagem">
+              <label for="imagem">Link da imagem:</label>
+              <input type="text" id="imagem" name="imagem" required />
+            </div>
+
+            <button id="btnCadastrar" type="submit">Cadastrar</button>
+          </form>
+          <% } else{ %>
+          <h2>Atualize o Pokémon</h2>
+          <form
+            action="/atualizar/<%= Pokedex.indexOf(Pokemon) %>"
+            method="POST"
+          >
+            <label for="nome">Nome:</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              value="<%= Pokemon.nome %>"
+              required
+            />
+
+            <label for="descricao">Descrição:</label>
+            <input
+              type="text"
+              id="descricao"
+              name="descricao"
+              value="<%= Pokemon.descricao %>"
+              required
+            />
+
+            <label for="tipo">Tipo:</label>
+            <input
+              type="text"
+              id="tipo"
+              name="tipo"
+              value="<%= Pokemon.tipo %>"
+              required
+            />
+
+            <label for="imagem">Link da imagem:</label>
+            <input
+              type="text"
+              id="imagem"
+              name="imagem"
+              value="<%= Pokemon.imagem %>"
+              required
+            />
+
+            <button id="btnAtualizar" type="submit">Atualizar</button>
+          </form>
+          <% } %>
+        </div>
+      </section>
     </main>
-  <footer id="rodape">
-    <div id="linkB">
-      <a class="linkedin" href="https://www.linkedin.com/in/kellbber-barcarolo-71a848230/ " target="_blank"> Kellbber Barcarolo </a>
-    </div>
-    <div id="p">
-    <p>
-      - Todos os direitos reservados &copy;
-      </p>
-    </div>
-</footer>
+    <footer id="rodape">
+      <div id="linkB">
+        <a
+          class="linkedin"
+          href="https://www.linkedin.com/in/kellbber-barcarolo-71a848230/ "
+          target="_blank"
+        >
+          Kellbber Barcarolo
+        </a>
+      </div>
+      <div id="p">
+        <p>- Todos os direitos reservados &copy;</p>
+      </div>
+    </footer>
   </body>
+</html>

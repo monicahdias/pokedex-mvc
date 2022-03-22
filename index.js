@@ -9,35 +9,55 @@ app.use(express.urlencoded());
 const pokedex = [
   {
     id: 1,
-    nome: "Bulbasaur",
+    nome: "Ho-Oh",
     descricao:
-      "There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger.",
-    tipo: "grass",
-    imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
+      "Ho-Oh's feathers glow in seven colors depending on the angle at which they are struck by light. These feathers are said to bring happiness to the bearers. This Pokémon is said to live at the foot of a rainbow.",
+    tipo: "Fire | Flying",
+    altura: "3.8 m",
+    peso: "199.0 kg",
+    categoria: "Rainbow",
+    habilidade: "Pressure",
+    fraquezas: "Water | Electric | Rock",
+    imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/250.png",
   },
   {
     id: 2,
-    nome: "Charmander",
+    nome: "Moltres",
     descricao:
-      "It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail.",
-    tipo: "fire",
-    imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
+      "It's one of the legendary bird Pokémon. When Moltres flaps its flaming wings, they glimmer with a dazzling red glow.",
+    tipo: "Fire | Flying",
+    altura: "2.0 m",
+    peso: "60.0 kg",
+    categoria: "Flame",
+    habilidade: "Pressure",
+    fraquezas: "Water | Electric | Rock",
+    imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/146.png",
   },
   {
     id: 3,
-    nome: "Squirtle",
+    nome: "Zapdos",
     descricao:
-      "When it retracts its long neck into its shell, it squirts out water with vigorous force.",
-    tipo: "water",
-    imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png",
+      "This Pokémon has complete control over electricity. There are tales of Zapdos nesting in the dark depths of pitch-black thunderclouds.",
+    tipo: "Electric | Flying",
+    altura: "1.6 m",
+    peso: "52.6 kg",
+    categoria: "Electric",
+    habilidade: "Pressure",
+    fraquezas: "Ice | Rock",
+    imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/145.png",
   },
   {
     id: 4,
-    nome: "Pikachu",
+    nome: "Articuno",
     descricao:
-      "Pikachu that can generate powerful electricity have cheek sacs that are extra soft and super stretchy.",
-    tipo: "Electric",
-    imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png",
+      "It's said that this Pokémon's beautiful blue wings are made of ice. Articuno flies over snowy mountains, its long tail fluttering along behind it.",
+    tipo: "Ice | Flying",
+    altura: "1.7 m",
+    peso: "54.4 kg",
+    categoria: "Freeze",
+    habilidade: "Pressure",
+    fraquezas: "Steel | Fire | Electric | Rock",
+    imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/144.png",
   },
 ];
 let pokemon = undefined;
@@ -50,11 +70,11 @@ app.get("/", (req, res) => {
 });
 
 app.get("/curiosidade", (req, res) => {
-  res.render("curiosidade")
+  res.render("curiosidade");
 });
 
 app.get("/musicas", (req, res) => {
-  res.render("musicas")
+  res.render("musicas");
 });
 
 app.post("/cadastro", (req, res) => {
@@ -67,7 +87,7 @@ app.post("/cadastro", (req, res) => {
 
 app.get("/detalhes/(:id)?", (req, res) => {
   const idPokemon = +req.params.id;
-  pokemon = pokedex.find(pokemon =>pokemon.id==idPokemon);
+  pokemon = pokedex.find((pokemon) => pokemon.id == idPokemon);
   res.render("cadastro", { Pokemon: pokemon, Pokedex: pokedex });
 });
 

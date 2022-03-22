@@ -9,12 +9,11 @@
   </head>
   <body>
     <nav>
-      <input type="checkbox" id="nav" class="hidden"/>
+      <input type="checkbox" id="nav" class="hidden" />
       <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
       <div class="nav-container">
-        <a href="/"><img src="/img/ICON.png" alt=""></a>
+        <a href="/"><img src="/img/ICON.png" alt="" /></a>
         <ul>
-          
           <li><a href="/detalhes/">CADASTRAR</a></li>
           <li><a href="/#cards">POKEMON</a></li>
           <li><a href="/curiosidade">CURIOSIDADE</a></li>
@@ -35,6 +34,21 @@
           </div>
           <div>
             <p>TIPO: <%= pokemon.tipo %></p>
+          </div>
+          <div>
+            <p>ALTURA: <%= pokemon.altura %></p>
+          </div>
+          <div>
+            <p>PESO: <%= pokemon.peso %></p>
+          </div>
+          <div>
+            <p>CATEGORIA: <%= pokemon.categoria %></p>
+          </div>
+          <div>
+            <p>HABILIDADE: <%= pokemon.habilidade %></p>
+          </div>
+          <div>
+            <p>FRAQUEZAS: <%= pokemon.fraquezas %></p>
           </div>
           <a id="editar" href="/detalhes/<%= pokemon.id %>">Editar</a>
           <a id="deletar" href="/deletar/<%= pokedex.indexOf(pokemon) %>"
