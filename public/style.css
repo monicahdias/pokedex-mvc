@@ -12,6 +12,7 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  
 }
 nav {
   background-image: url("/img/background.png");
@@ -102,6 +103,7 @@ nav ul li a:hover {
   }
   .nav-open {
     position: fixed;
+    background-color: black;
     right: 10px;
     top: 10px;
     display: block;
@@ -253,8 +255,8 @@ main h1 {
   border-radius: 20px;
   width: 100%;
   flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
   padding: 1rem;
 }
 
@@ -266,10 +268,20 @@ main h1 {
 #cadastro img {
   display: flex;
   width: 50%;
+  
 }
 
 form {
-  column-count: 2;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+}
+
+form input{
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: .6rem;
 }
 
 form label {
@@ -279,4 +291,25 @@ form label {
 
 footer {
   text-align: center;
+}
+#botaoCadastro{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#btnCadastrar{
+  width: 50%;
+  text-decoration: none;
+  border: 2px solid green;
+  background-color: white;
+  color: green;
+  padding: 1rem;
+  font-weight: 700;
+}
+#btnCadastrar:hover{
+  border: 2px solid white;
+  background-color: green;
+  color: white;
+
+  
 }
