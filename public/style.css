@@ -13,7 +13,6 @@ body {
   display: flex;
   flex-direction: column;
   background-image: url("/img/img.png");
-  
 }
 nav {
   background-image: url("/img/background.png");
@@ -177,7 +176,7 @@ main h1 {
 }
 #cards {
   display: flex;
-  background-color: rgb(61, 53, 53);
+  background-color: rgba(61, 53, 53, 0.877);
   border-radius: 20px;
   width: 100%;
   flex-wrap: wrap;
@@ -252,7 +251,7 @@ main h1 {
 
 #cadastro {
   display: flex;
-  background-color: rgb(61, 53, 53);
+  background-color: rgba(61, 53, 53, 0.877);
   border-radius: 20px;
   width: 100%;
   flex-wrap: wrap;
@@ -269,7 +268,6 @@ main h1 {
 #cadastro img {
   display: flex;
   width: 50%;
-  
 }
 
 form {
@@ -279,10 +277,10 @@ form {
   flex-direction: column;
 }
 
-form input{
+form input {
   width: 100%;
   margin-bottom: 1rem;
-  padding: .6rem;
+  padding: 0.6rem;
 }
 
 form label {
@@ -293,12 +291,12 @@ form label {
 footer {
   text-align: center;
 }
-#botaoCadastro{
+#botaoCadastro {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-#btnCadastrar{
+#btnCadastrar {
   width: 50%;
   text-decoration: none;
   border: 2px solid green;
@@ -307,7 +305,7 @@ footer {
   padding: 1rem;
   font-weight: 700;
 }
-#btnCadastrar:hover{
+#btnCadastrar:hover {
   border: 2px solid white;
   background-color: green;
   color: white;
