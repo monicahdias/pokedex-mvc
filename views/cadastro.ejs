@@ -17,7 +17,7 @@
           <li><a href="/detalhes/">CADASTRAR</a></li>
           <li><a href="/#cards">POKEMON</a></li>
           <li><a href="/curiosidade">CURIOSIDADE</a></li>
-          <li><a href="/musicas">MÚSICAS</a></li>
+          
         </ul>
       </div>
     </nav>
@@ -109,6 +109,31 @@
               value="<%= Pokemon.tipo %>"
               required
             />
+
+            <div id="cadastroAltura">
+              <label for="altura">Altura:</label>
+              <input type="text" id="altura" name="altura" value="<%= Pokemon.altura %>" required />
+            </div>
+
+            <div id="cadastroPeso">
+              <label for="peso">Peso:</label>
+              <input type="text" id="peso" name="peso" value="<%= Pokemon.peso %>" required />
+            </div>
+
+            <div id="cadastroCategoria">
+              <label for="categoria">Categoria:</label>
+              <input type="text" id="categoria" name="categoria" value="<%= Pokemon.categoria %>" required />
+            </div>
+
+            <div id="cadastroHabilidade">
+              <label for="habilidade">Habilidade:</label>
+              <input type="text" id="habilidade" name="habilidade" value="<%= Pokemon.habilidade %>" required />
+            </div>
+
+            <div id="cadastroFraquezas">
+              <label for="fraquezas">Fraquezas:</label>
+              <input type="text" id="fraquezas" name="fraquezas" value="<%= Pokemon.fraquezas %>" required />
+            </div>
 
             <label for="imagem">Link da imagem:</label>
             <input

@@ -79,7 +79,8 @@ app.get("/musicas", (req, res) => {
 
 app.post("/cadastro", (req, res) => {
   pokemon = req.body;
-  pokemon.id = nextId++;
+  pokemon.id = nextId;
+  nextId++
   pokedex.push(pokemon);
   pokemon = undefined;
   res.redirect("/#cards");
@@ -87,26 +88,27 @@ app.post("/cadastro", (req, res) => {
 
 app.get("/detalhes/(:id)?", (req, res) => {
   if(!isNaN(+req.params.id)){
+    console.log('entrou aqui')
   const idPokemon = +req.params.id;
   pokemon = pokedex.find((pokemon) => pokemon.id == idPokemon);
   res.render("cadastro", { Pokemon: pokemon, Pokedex: pokedex });
   }
-  res.render("cadastro", {Pokemon: pokemon});
+  res.render("cadastro", {Pokemon: pokemon, Pokedex: pokedex});
 });
 
 app.post("/atualizar/:id", (req, res) => {
-  const id = +req.params.id;
+  const index = +req.params.id;
   const newPokemon = req.body;
-  newPokemon.id = id;
-  pokedex[id] = newPokemon;
-  console.log(newPokemon)
+  newPokemon.id = pokedex[index].id;
+  pokedex[index] = newPokemon;
   pokemon = undefined;
   res.redirect("/#cards");
 });
 
 app.get("/deletar/:id", (req, res) => {
-  const id = +req.params.id;
-  delete pokedex[id];
+  const index = +req.params.id;
+  pokedex.splice(index, 1)
+  console.log(pokedex)
   pokemon = undefined;
   res.redirect("/#cards");
 });
