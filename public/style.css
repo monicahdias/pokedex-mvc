@@ -291,12 +291,12 @@ form label {
 footer {
   text-align: center;
 }
-#botaoCadastro {
+.botaoCadastro {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-#btnCadastrar {
+.btnCadastrar {
   width: 50%;
   text-decoration: none;
   border: 2px solid green;
@@ -305,7 +305,7 @@ footer {
   padding: 1rem;
   font-weight: 700;
 }
-#btnCadastrar:hover {
+.btnCadastrar:hover {
   border: 2px solid white;
   background-color: green;
   color: white;

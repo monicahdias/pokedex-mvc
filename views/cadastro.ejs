@@ -29,52 +29,52 @@
           <% if(Pokemon == undefined) { %>
           <h2>Cadastre um novo Pokémon!</h2>
           <form action="/cadastro" method="POST">
-            <div id="cadastroNome">
+            <div class="cadastroNome">
               <label for="nome">Nome:</label>
               <input type="text" id="nome" name="nome" required />
             </div>
 
-            <div id="lugarDescricao">
+            <div class="lugarDescricao">
               <label for="descricao">Descrição:</label>
               <input type="text" id="descricao" name="descricao" required />
             </div>
 
-            <div id="cadastroTipo">
+            <div class="cadastroTipo">
               <label for="tipo">Tipo:</label>
               <input type="text" id="tipo" name="tipo" required />
             </div>
 
-            <div id="cadastroAltura">
+            <div class="cadastroAltura">
               <label for="altura">Altura:</label>
               <input type="text" id="altura" name="altura" required />
             </div>
 
-            <div id="cadastroPeso">
+            <div class="cadastroPeso">
               <label for="peso">Peso:</label>
               <input type="text" id="peso" name="peso" required />
             </div>
 
-            <div id="cadastroCategoria">
+            <div class="cadastroCategoria">
               <label for="categoria">Categoria:</label>
               <input type="text" id="categoria" name="categoria" required />
             </div>
 
-            <div id="cadastroHabilidade">
+            <div class="cadastroHabilidade">
               <label for="habilidade">Habilidade:</label>
               <input type="text" id="habilidade" name="habilidade" required />
             </div>
 
-            <div id="cadastroFraquezas">
+            <div class="cadastroFraquezas">
               <label for="fraquezas">Fraquezas:</label>
               <input type="text" id="fraquezas" name="fraquezas" required />
             </div>
 
-            <div id="cadastroImagem">
+            <div class="cadastroImagem">
               <label for="imagem">Link da imagem:</label>
               <input type="text" id="imagem" name="imagem" required />
             </div>
-            <div id="botaoCadastro">
-              <button id="btnCadastrar" type="submit">Cadastrar</button>
+            <div class="botaoCadastro">
+              <button class="btnCadastrar" type="submit">Cadastrar</button>
             </div>
           </form>
           <% } else{ %>
@@ -83,6 +83,7 @@
             action="/atualizar/<%= Pokedex.indexOf(Pokemon) %>"
             method="POST"
           >
+          <div class="cadastroNome">
             <label for="nome">Nome:</label>
             <input
               type="text"
@@ -91,7 +92,8 @@
               value="<%= Pokemon.nome %>"
               required
             />
-
+          </div>
+          <div class="lugarDescricao">
             <label for="descricao">Descrição:</label>
             <input
               type="text"
@@ -100,7 +102,8 @@
               value="<%= Pokemon.descricao %>"
               required
             />
-
+          </div>
+          <div class="cadastroTipo">
             <label for="tipo">Tipo:</label>
             <input
               type="text"
@@ -109,33 +112,31 @@
               value="<%= Pokemon.tipo %>"
               required
             />
-
-<<<<<<< HEAD
-            <div id="cadastroAltura">
+          </div>
+            <div class="cadastroAltura">
               <label for="altura">Altura:</label>
               <input type="text" id="altura" name="altura" value="<%= Pokemon.altura %>" required />
             </div>
 
-            <div id="cadastroPeso">
+            <div class="cadastroPeso">
               <label for="peso">Peso:</label>
               <input type="text" id="peso" name="peso" value="<%= Pokemon.peso %>" required />
             </div>
 
-            <div id="cadastroCategoria">
+            <div class="cadastroCategoria">
               <label for="categoria">Categoria:</label>
               <input type="text" id="categoria" name="categoria" value="<%= Pokemon.categoria %>" required />
             </div>
 
-            <div id="cadastroHabilidade">
+            <div class="cadastroHabilidade">
               <label for="habilidade">Habilidade:</label>
               <input type="text" id="habilidade" name="habilidade" value="<%= Pokemon.habilidade %>" required />
             </div>
 
-            <div id="cadastroFraquezas">
+            <div class="cadastroFraquezas">
               <label for="fraquezas">Fraquezas:</label>
               <input type="text" id="fraquezas" name="fraquezas" value="<%= Pokemon.fraquezas %>" required />
             </div>
-=======
             <label for="altura">Altura:</label>
             <input
               type="text"
@@ -144,7 +145,7 @@
               value="<%= Pokemon.altura %>"
               required
             />
-
+            <div class="cadastroPeso">
             <label for="peso">Peso:</label>
             <input
               type="text"
@@ -153,7 +154,8 @@
               value="<%= Pokemon.peso %>"
               required
             />
-
+          </div>
+          <div class="cadastroCategoria">
             <label for="categoria">Categoria:</label>
             <input
               type="text"
@@ -162,7 +164,8 @@
               value="<%= Pokemon.categoria %>"
               required
             />
-
+          </div>
+          <div class="cadastroHabilidade">
             <label for="habilidade">Habilidade:</label>
             <input
               type="text"
@@ -171,7 +174,8 @@
               value="<%= Pokemon.habilidade %>"
               required
             />
-
+          </div>
+          <div class="cadastroFraquezas">
             <label for="fraquezas">Fraquezas:</label>
             <input
               type="text"
@@ -180,8 +184,7 @@
               value="<%= Pokemon.fraquezas %>"
               required
             />
->>>>>>> a20c28f7bfc82e7a9fd97ff7d525961db4a9750e
-
+          </div>
             <label for="imagem">Link da imagem:</label>
             <input
               type="text"
@@ -190,8 +193,9 @@
               value="<%= Pokemon.imagem %>"
               required
             />
-
-            <button id="btnAtualizar" type="submit">Atualizar</button>
+            <div class="botaoCadastro">
+            <button class="btnCadastrar" type="submit">Atualizar</button>
+          </div>
           </form>
           <% } %>
         </div>
