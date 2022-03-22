@@ -17,7 +17,6 @@
           <li><a href="/detalhes/">CADASTRAR</a></li>
           <li><a href="/#cards">POKEMON</a></li>
           <li><a href="/curiosidade">CURIOSIDADE</a></li>
-          
         </ul>
       </div>
     </nav>
@@ -83,108 +82,87 @@
             action="/atualizar/<%= Pokedex.indexOf(Pokemon) %>"
             method="POST"
           >
-          <div class="cadastroNome">
-            <label for="nome">Nome:</label>
-            <input
-              type="text"
-              id="nome"
-              name="nome"
-              value="<%= Pokemon.nome %>"
-              required
-            />
-          </div>
-          <div class="lugarDescricao">
-            <label for="descricao">Descrição:</label>
-            <input
-              type="text"
-              id="descricao"
-              name="descricao"
-              value="<%= Pokemon.descricao %>"
-              required
-            />
-          </div>
-          <div class="cadastroTipo">
-            <label for="tipo">Tipo:</label>
-            <input
-              type="text"
-              id="tipo"
-              name="tipo"
-              value="<%= Pokemon.tipo %>"
-              required
-            />
-          </div>
+            <div class="cadastroNome">
+              <label for="nome">Nome:</label>
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                value="<%= Pokemon.nome %>"
+                required
+              />
+            </div>
+            <div class="lugarDescricao">
+              <label for="descricao">Descrição:</label>
+              <input
+                type="text"
+                id="descricao"
+                name="descricao"
+                value="<%= Pokemon.descricao %>"
+                required
+              />
+            </div>
+            <div class="cadastroTipo">
+              <label for="tipo">Tipo:</label>
+              <input
+                type="text"
+                id="tipo"
+                name="tipo"
+                value="<%= Pokemon.tipo %>"
+                required
+              />
+            </div>
             <div class="cadastroAltura">
               <label for="altura">Altura:</label>
-              <input type="text" id="altura" name="altura" value="<%= Pokemon.altura %>" required />
+              <input
+                type="text"
+                id="altura"
+                name="altura"
+                value="<%= Pokemon.altura %>"
+                required
+              />
             </div>
 
             <div class="cadastroPeso">
               <label for="peso">Peso:</label>
-              <input type="text" id="peso" name="peso" value="<%= Pokemon.peso %>" required />
+              <input
+                type="text"
+                id="peso"
+                name="peso"
+                value="<%= Pokemon.peso %>"
+                required
+              />
             </div>
-
             <div class="cadastroCategoria">
               <label for="categoria">Categoria:</label>
-              <input type="text" id="categoria" name="categoria" value="<%= Pokemon.categoria %>" required />
+              <input
+                type="text"
+                id="categoria"
+                name="categoria"
+                value="<%= Pokemon.categoria %>"
+                required
+              />
             </div>
-
             <div class="cadastroHabilidade">
               <label for="habilidade">Habilidade:</label>
-              <input type="text" id="habilidade" name="habilidade" value="<%= Pokemon.habilidade %>" required />
+              <input
+                type="text"
+                id="habilidade"
+                name="habilidade"
+                value="<%= Pokemon.habilidade %>"
+                required
+              />
             </div>
-
             <div class="cadastroFraquezas">
               <label for="fraquezas">Fraquezas:</label>
-              <input type="text" id="fraquezas" name="fraquezas" value="<%= Pokemon.fraquezas %>" required />
+              <input
+                type="text"
+                id="fraquezas"
+                name="fraquezas"
+                value="<%= Pokemon.fraquezas %>"
+                required
+              />
             </div>
-            <label for="altura">Altura:</label>
-            <input
-              type="text"
-              id="altura"
-              name="altura"
-              value="<%= Pokemon.altura %>"
-              required
-            />
-            <div class="cadastroPeso">
-            <label for="peso">Peso:</label>
-            <input
-              type="text"
-              id="peso"
-              name="peso"
-              value="<%= Pokemon.peso %>"
-              required
-            />
-          </div>
-          <div class="cadastroCategoria">
-            <label for="categoria">Categoria:</label>
-            <input
-              type="text"
-              id="categoria"
-              name="categoria"
-              value="<%= Pokemon.categoria %>"
-              required
-            />
-          </div>
-          <div class="cadastroHabilidade">
-            <label for="habilidade">Habilidade:</label>
-            <input
-              type="text"
-              id="habilidade"
-              name="habilidade"
-              value="<%= Pokemon.habilidade %>"
-              required
-            />
-          </div>
-          <div class="cadastroFraquezas">
-            <label for="fraquezas">Fraquezas:</label>
-            <input
-              type="text"
-              id="fraquezas"
-              name="fraquezas"
-              value="<%= Pokemon.fraquezas %>"
-              required
-            />
-          </div>
             <label for="imagem">Link da imagem:</label>
             <input
               type="text"
@@ -194,8 +172,8 @@
               required
             />
             <div class="botaoCadastro">
-            <button class="btnCadastrar" type="submit">Atualizar</button>
-          </div>
+              <button class="btnCadastrar" type="submit">Atualizar</button>
+            </div>
           </form>
           <% } %>
         </div>

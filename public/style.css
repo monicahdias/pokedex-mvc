@@ -13,6 +13,8 @@ body {
   display: flex;
   flex-direction: column;
   background-image: url("/img/img.png");
+  background-size: cover;
+  background-position: center;
 }
 nav {
   background-image: url("/img/background.png");
@@ -24,7 +26,7 @@ nav {
 }
 nav ul {
   float: right;
-  margin-right: 0.5rem;
+  margin-right: 2rem;
 }
 nav img {
   display: flex;
@@ -35,7 +37,7 @@ nav img {
 }
 nav ul li {
   display: inline-block;
-  float: left;
+  /* float: left; */
 }
 nav ul li:not(:first-child) {
   margin-left: 25px;
@@ -272,7 +274,7 @@ main h1 {
 
 form {
   width: 100%;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   align-items: center;
   flex-direction: column;
 }
@@ -309,4 +311,21 @@ footer {
   border: 2px solid white;
   background-color: green;
   color: white;
+}
+#rodape{
+  background-color: #00000080;
+  display: flex;
+  flex-direction: column;
+  width: 100%;  
+}
+#rodape a{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none;
+  transition: 0.5s ease-in-out;
+  font-style: italic;
+}
+#rodape a:hover{
+  transform: scale(1.1);
 }
