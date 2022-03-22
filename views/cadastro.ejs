@@ -74,8 +74,8 @@
               <input type="text" id="imagem" name="imagem" required />
             </div>
             <div id="botaoCadastro">
-            <button id="btnCadastrar" type="submit">Cadastrar</button>
-          </div>
+              <button id="btnCadastrar" type="submit">Cadastrar</button>
+            </div>
           </form>
           <% } else{ %>
           <h2>Atualize o Pokémon</h2>
@@ -107,6 +107,51 @@
               id="tipo"
               name="tipo"
               value="<%= Pokemon.tipo %>"
+              required
+            />
+
+            <label for="altura">Altura:</label>
+            <input
+              type="text"
+              id="altura"
+              name="altura"
+              value="<%= Pokemon.altura %>"
+              required
+            />
+
+            <label for="peso">Peso:</label>
+            <input
+              type="text"
+              id="peso"
+              name="peso"
+              value="<%= Pokemon.peso %>"
+              required
+            />
+
+            <label for="categoria">Categoria:</label>
+            <input
+              type="text"
+              id="categoria"
+              name="categoria"
+              value="<%= Pokemon.categoria %>"
+              required
+            />
+
+            <label for="habilidade">Habilidade:</label>
+            <input
+              type="text"
+              id="habilidade"
+              name="habilidade"
+              value="<%= Pokemon.habilidade %>"
+              required
+            />
+
+            <label for="fraquezas">Fraquezas:</label>
+            <input
+              type="text"
+              id="fraquezas"
+              name="fraquezas"
+              value="<%= Pokemon.fraquezas %>"
               required
             />
 
