@@ -86,9 +86,12 @@ app.post("/cadastro", (req, res) => {
 });
 
 app.get("/detalhes/(:id)?", (req, res) => {
+  if(!isNaN(+req.params.id)){
   const idPokemon = +req.params.id;
   pokemon = pokedex.find((pokemon) => pokemon.id == idPokemon);
   res.render("cadastro", { Pokemon: pokemon, Pokedex: pokedex });
+  }
+  res.render("cadastro", {Pokemon: pokemon});
 });
 
 app.post("/atualizar/:id", (req, res) => {
@@ -96,6 +99,7 @@ app.post("/atualizar/:id", (req, res) => {
   const newPokemon = req.body;
   newPokemon.id = id;
   pokedex[id] = newPokemon;
+  console.log(newPokemon)
   pokemon = undefined;
   res.redirect("/#cards");
 });
