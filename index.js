@@ -73,11 +73,7 @@ app.get("/curiosidade", (req, res) => {
   res.render("curiosidade");
 });
 
-app.get("/musicas", (req, res) => {
-  res.render("musicas");
-});
-
-app.post("/cadastro", (req, res) => {
+app.post("/formulario", (req, res) => {
   pokemon = req.body;
   pokemon.id = nextId;
   nextId++
@@ -86,19 +82,19 @@ app.post("/cadastro", (req, res) => {
   res.redirect("/#cards");
 });
 
-app.get("/detalhes/(:id)?", (req, res) => {
+app.get("/cadastro/(:id)?", (req, res) => {
   if(!isNaN(+req.params.id)){
   const idPokemon = +req.params.id;
   pokemon = pokedex.find((pokemon) => pokemon.id == idPokemon);
-  res.render("cadastro", { Pokemon: pokemon, Pokedex: pokedex });
+  res.render("formulario", { Pokemon: pokemon, Pokedex: pokedex });
   }
-  res.render("cadastro", {Pokemon: pokemon, Pokedex: pokedex});
+  res.render("formulario", {Pokemon: pokemon, Pokedex: pokedex});
 });
 
-app.get("/sobre/:id", (req, res) => {
+app.get("/detalhes/:id", (req, res) => {
   const index = req.params.id;
   const pokemons = pokedex[index];
-  res.render("sobre", { pokemon: pokemons });
+  res.render("detalhes", { pokemon: pokemons });
 });
 
 app.post("/atualizar/:id", (req, res) => {

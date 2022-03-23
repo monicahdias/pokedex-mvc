@@ -14,8 +14,8 @@
       <div class="nav-container">
         <a href="/"><img src="/img/ICON.png" alt="" /></a>
         <ul>
-          <li><a href="/">HOME</a></li>
-          <li><a href="/detalhes/">CADASTRAR</a></li>
+           <li><a href="/">HOME</a></li>
+          <li><a href="/cadastro/">CADASTRAR</a></li>
           <li><a href="/#cards">POKEMON</a></li>
           <li><a href="/curiosidade">CURIOSIDADE</a></li>
         </ul>
@@ -28,7 +28,7 @@
         <div>
           <% if(Pokemon == undefined) { %>
           <h2>Cadastre um novo Pokémon!</h2>
-          <form action="/cadastro" method="POST">
+          <form action="/formulario" method="POST">
             <div class="cadastroNome">
               <label for="nome">Nome:</label>
               <input type="text" id="nome" name="nome" required />

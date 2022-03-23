@@ -15,7 +15,7 @@
         <a href="/"><img src="/img/ICON.png" alt="" /></a>
         <ul>
           <li><a href="/">HOME</a></li>
-          <li><a href="/detalhes/">CADASTRAR</a></li>
+          <li><a href="/cadastro/">CADASTRAR</a></li>
           <li><a href="/#cards">POKEMON</a></li>
           <li><a href="/curiosidade">CURIOSIDADE</a></li>
           
@@ -28,11 +28,12 @@
         <h1>Pokédex</h1>
         <% pokedex.forEach((pokemon) =>{ %>
         <div class="card">
-          <a class="card2" href="/sobre/<%= pokedex.indexOf(pokemon) %>">
+          <a class="card2" href="/detalhes/<%= pokedex.indexOf(pokemon) %>">
           <img src="<%= pokemon.imagem %>" alt="pokemon" />
           <h3><%= pokemon.nome %></h3>
+          <h2>Tipo: <%= pokemon.tipo %></h2>
          
-          <a id="editar" href="/detalhes/<%= pokemon.id %>">Editar</a>
+          <a id="editar" href="/cadastro/<%= pokemon.id %>">Editar</a>
           <a id="deletar" href="/deletar/<%= pokedex.indexOf(pokemon) %>"
             >Deletar</a
           >
