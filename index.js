@@ -86,9 +86,9 @@ app.get("/cadastro/(:id)?", (req, res) => {
   if(!isNaN(+req.params.id)){
   const idPokemon = +req.params.id;
   pokemon = pokedex.find((pokemon) => pokemon.id == idPokemon);
-  res.render("formulario", { Pokemon: pokemon, Pokedex: pokedex });
+  res.render("cadastro", { Pokemon: pokemon, Pokedex: pokedex });
   }
-  res.render("formulario", {Pokemon: pokemon, Pokedex: pokedex});
+  res.render("cadastro", {Pokemon: pokemon, Pokedex: pokedex});
 });
 
 app.get("/detalhes/:id", (req, res) => {
