@@ -109,7 +109,7 @@ app.post("/atualizar/:id", (req, res) => {
 app.get("/deletar/:id", (req, res) => {
   const index = +req.params.id;
   pokedex.splice(index, 1)
-  console.log(pokedex)
+  
   pokemon = undefined;
   res.redirect("/#cards");
 });
