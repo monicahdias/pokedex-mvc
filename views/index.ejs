@@ -18,26 +18,24 @@
           <li><a href="/cadastro/">CADASTRAR</a></li>
           <li><a href="/#cards">POKEMON</a></li>
           <li><a href="/curiosidade">CURIOSIDADE</a></li>
-          
         </ul>
       </div>
     </nav>
-
     <main>
       <section class="cards">
         <h1>Pokédex</h1>
         <% pokedex.forEach((pokemon) =>{ %>
         <div class="card">
           <a class="card2" href="/detalhes/<%= pokedex.indexOf(pokemon) %>">
-          <img src="<%= pokemon.imagem %>" alt="pokemon" />
-          <h3><%= pokemon.nome %></h3>
-          <h2>Tipo: <%= pokemon.tipo %></h2>
-         
-          <a id="editar" href="/cadastro/<%= pokemon.id %>">Editar</a>
-          <a id="deletar" href="/deletar/<%= pokedex.indexOf(pokemon) %>"
-            >Deletar</a
-          >
-        </a>
+            <img src="<%= pokemon.imagem %>" alt="pokemon" />
+            <h3><%= pokemon.nome %></h3>
+            <h2>Tipo: <%= pokemon.tipo %></h2>
+
+            <a id="editar" href="/cadastro/<%= pokemon.id %>">Editar</a>
+            <a id="deletar" href="/deletar/<%= pokedex.indexOf(pokemon) %>"
+              >Deletar</a
+            >
+          </a>
         </div>
         <% }) %>
       </section>
@@ -52,12 +50,12 @@
           Kellbber Barcarolo
         </a>
         <a
-        class="linkedin"
-        href="https://www.linkedin.com/in/monicashdias/ "
-        target="_blank"
-      >
-        Monica Dias
-      </a>
+          class="linkedin"
+          href="https://www.linkedin.com/in/monicashdias/ "
+          target="_blank"
+        >
+          Monica Dias
+        </a>
       </div>
       <div id="p">
         <p>Todos os direitos reservados &copy;</p>

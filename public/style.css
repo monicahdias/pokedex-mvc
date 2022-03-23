@@ -189,7 +189,6 @@ main h1 {
 }
 .card {
   background-color: #fff;
-  border: solid 5px rgb(0, 0, 0);
   border-radius: 10%;
   width: 250px;
   height: 350px;
@@ -210,7 +209,7 @@ main h1 {
   transition: 0.5s ease-in-out;
   text-decoration: none;
 }
-.card2:hover{
+.card2:hover {
   transform: scale(1.1);
 }
 .card h3 {
@@ -224,14 +223,18 @@ main h1 {
   align-items: center;
   width: 200px;
 }
-.cardTexto{
+.cardTexto {
   width: 50%;
-  border: black 5px solid;
+  padding: 1rem;
   border-radius: 5%;
   background-color: white;
   font-size: 1rem;
 }
-
+.cardTexto h2 {
+  padding: 0.2rem;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
 .cards .card .descricao {
   padding: 0.5rem;
 }
@@ -312,7 +315,6 @@ form label {
   color: #fff;
 }
 
-
 .botaoCadastro {
   width: 100%;
   display: flex;
@@ -332,14 +334,15 @@ form label {
   background-color: green;
   color: white;
 }
-#rodape{
+#rodape {
   background-color: #00000080;
   display: flex;
   flex-direction: column;
-  width: 100%; 
+  width: 100%;
   align-items: center;
+  padding: 1rem;
 }
-#rodape a{
+#rodape a {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -347,6 +350,49 @@ form label {
   transition: 0.5s ease-in-out;
   font-style: italic;
 }
-#rodape a:hover{
+#rodape a:hover {
   transform: scale(1.1);
+}
+#scarletViolet {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#tituloCuriosidade {
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem 0 1rem 0;
+  width: 100%;
+  background-color: #18181859;
+  color: #080808;
+  text-shadow: 0.5rem 0.5rem 0.5rem #a10505;
+}
+.texto1 {
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0 1rem 0;
+  font-size: 1.2rem;
+}
+#video {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+#video iframe {
+  width: 60%;
+}
+.imgCuriosidade img {
+  width: 75%;
+  padding-bottom: 0.5rem;
+}
+.imgCuriosidade {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.imgCuriosidade figcaption {
+  text-align: center;
 }

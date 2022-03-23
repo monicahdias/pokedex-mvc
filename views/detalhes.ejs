@@ -1,66 +1,63 @@
 <!DOCTYPE html>
 <html lang="PT-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style.css" />
- 
+
     <title><%= pokemon.nome %></title>
-</head>
-<body>
+  </head>
+  <body>
     <nav>
-        <input type="checkbox" id="nav" class="hidden" />
-        <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
-        <div class="nav-container">
-          <a href="/"><img src="/img/ICON.png" alt="" /></a>
-          <ul>
-            <li><a href="/">HOME</a></li>
-            <li><a href="/cadastro/">CADASTRAR</a></li>
-            <li><a href="/#cards">POKEMON</a></li>
-            <li><a href="/curiosidade">CURIOSIDADE</a></li>
-          </ul>
-        </div>
-      </nav>
-      <main>
-    <div class="cards">
+      <input type="checkbox" id="nav" class="hidden" />
+      <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
+      <div class="nav-container">
+        <a href="/"><img src="/img/ICON.png" alt="" /></a>
+        <ul>
+          <li><a href="/">HOME</a></li>
+          <li><a href="/cadastro/">CADASTRAR</a></li>
+          <li><a href="/#cards">POKEMON</a></li>
+          <li><a href="/curiosidade">CURIOSIDADE</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <div class="cards">
         <section class="card">
-            <img src="<%= pokemon.imagem %>" alt="imagem do pokemon">
-            <h2>Nome: <%= pokemon.nome %></h2>
-            
+          <img src="<%= pokemon.imagem %>" alt="imagem do pokemon" />
+          <h2>Nome: <%= pokemon.nome %></h2>
         </section>
         <section class="cardTexto">
-            
-            
-            <h2>Descrição: <%= pokemon.descricao %></h2>
-            <h2>Altura: <%= pokemon.altura %> m</h2>
-            <h2>Peso: <%= pokemon.peso %> Kg</h2>
-            <h2>Categoria: <%= pokemon.categoria %></h2>
-            <h2>Habilidade: <%= pokemon.habilidade %></h2>
-            <h2>Fraquezas: <%= pokemon.fraquezas %></h2>
+          <h2>Descrição: <%= pokemon.descricao %></h2>
+          <h2>Altura: <%= pokemon.altura %> m</h2>
+          <h2>Peso: <%= pokemon.peso %> Kg</h2>
+          <h2>Categoria: <%= pokemon.categoria %></h2>
+          <h2>Habilidade: <%= pokemon.habilidade %></h2>
+          <h2>Fraquezas: <%= pokemon.fraquezas %></h2>
         </section>
-    </div>
+      </div>
     </main>
     <footer id="rodape">
-        <div id="linkB">
-          <a
-            class="linkedin"
-            href="https://www.linkedin.com/in/kellbber-barcarolo-71a848230/ "
-            target="_blank"
-          >
-            Kellbber Barcarolo
-          </a>
-          <a
+      <div id="linkB">
+        <a
+          class="linkedin"
+          href="https://www.linkedin.com/in/kellbber-barcarolo-71a848230/ "
+          target="_blank"
+        >
+          Kellbber Barcarolo
+        </a>
+        <a
           class="linkedin"
           href="https://www.linkedin.com/in/monicashdias/ "
           target="_blank"
         >
           Monica Dias
         </a>
-        </div>
-        <div id="p">
-          <p>Todos os direitos reservados &copy;</p>
-        </div>
-      </footer>
-</body>
+      </div>
+      <div id="p">
+        <p>Todos os direitos reservados &copy;</p>
+      </div>
+    </footer>
+  </body>
 </html>
