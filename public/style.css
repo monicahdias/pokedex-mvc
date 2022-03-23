@@ -165,6 +165,8 @@ main {
   width: 100%;
   display: flex;
   padding: 5% 10% 10% 10%;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 main h1 {
@@ -173,32 +175,44 @@ main h1 {
   margin-bottom: 2rem;
   color: #fff;
 }
-#cards h1 {
+.cards h1 {
   width: 100%;
 }
-#cards {
+.cards {
   display: flex;
   background-color: rgba(61, 53, 53, 0.877);
   border-radius: 20px;
   width: 100%;
   flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
 }
 .card {
   background-color: #fff;
   border: solid 5px rgb(0, 0, 0);
   border-radius: 10%;
-  width: 300px;
-  height: 450px;
-  margin: 15px 30px 15px 30px;
+  width: 250px;
+  height: 350px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   transition: 0.5s ease-in-out;
+  margin: 15px 30px 15px 30px;
 }
-
+.card2 {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: 0.5s ease-in-out;
+  text-decoration: none;
+}
+.card2:hover{
+  transform: scale(1.1);
+}
 .card h3 {
   text-align: center;
 }
@@ -208,9 +222,17 @@ main h1 {
 }
 .card img {
   align-items: center;
-  width: 50%;
+  width: 200px;
 }
-#cards .card .descricao {
+.cardTexto{
+  width: 50%;
+  border: black 5px solid;
+  border-radius: 5%;
+  background-color: white;
+  font-size: 1rem;
+}
+
+.cards .card .descricao {
   padding: 0.5rem;
 }
 #editar {
@@ -290,9 +312,7 @@ form label {
   color: #fff;
 }
 
-footer {
-  text-align: center;
-}
+
 .botaoCadastro {
   width: 100%;
   display: flex;
@@ -316,7 +336,8 @@ footer {
   background-color: #00000080;
   display: flex;
   flex-direction: column;
-  width: 100%;  
+  width: 100%; 
+  align-items: center;
 }
 #rodape a{
   display: flex;

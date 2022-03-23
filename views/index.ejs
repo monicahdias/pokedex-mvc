@@ -14,45 +14,29 @@
       <div class="nav-container">
         <a href="/"><img src="/img/ICON.png" alt="" /></a>
         <ul>
+          <li><a href="/">HOME</a></li>
           <li><a href="/detalhes/">CADASTRAR</a></li>
           <li><a href="/#cards">POKEMON</a></li>
           <li><a href="/curiosidade">CURIOSIDADE</a></li>
+          
         </ul>
       </div>
     </nav>
 
     <main>
-      <section id="cards">
+      <section class="cards">
         <h1>Pokédex</h1>
         <% pokedex.forEach((pokemon) =>{ %>
         <div class="card">
+          <a class="card2" href="/sobre/<%= pokedex.indexOf(pokemon) %>">
           <img src="<%= pokemon.imagem %>" alt="pokemon" />
           <h3><%= pokemon.nome %></h3>
-          <div>
-            <p class="descricao">DESCRIÇÃO: <%= pokemon.descricao %></p>
-          </div>
-          <div>
-            <p>TIPO: <%= pokemon.tipo %></p>
-          </div>
-          <div>
-            <p>ALTURA: <%= pokemon.altura %></p>
-          </div>
-          <div>
-            <p>PESO: <%= pokemon.peso %></p>
-          </div>
-          <div>
-            <p>CATEGORIA: <%= pokemon.categoria %></p>
-          </div>
-          <div>
-            <p>HABILIDADE: <%= pokemon.habilidade %></p>
-          </div>
-          <div>
-            <p>FRAQUEZAS: <%= pokemon.fraquezas %></p>
-          </div>
+         
           <a id="editar" href="/detalhes/<%= pokemon.id %>">Editar</a>
           <a id="deletar" href="/deletar/<%= pokedex.indexOf(pokemon) %>"
             >Deletar</a
           >
+        </a>
         </div>
         <% }) %>
       </section>
