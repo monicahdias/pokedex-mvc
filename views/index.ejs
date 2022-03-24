@@ -27,8 +27,8 @@
         <div class="card">
           <a class="card2" href="/detalhes/<%= pokedex.indexOf(pokemon) %>">
             <img src="<%= pokemon.imagem %>" alt="pokemon" />
-            <h3><%= pokemon.nome %></h3>
-            <h2>Tipo: <%= pokemon.tipo %></h2>
+            <h2><%= pokemon.nome %></h2>
+            <h3>Tipo: <%= pokemon.tipo %></h3>
 
             <a id="editar" href="/cadastro/<%= pokemon.id %>">Editar</a>
             <a id="deletar" href="/deletar/<%= pokedex.indexOf(pokemon) %>"
