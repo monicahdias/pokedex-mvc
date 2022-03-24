@@ -47,10 +47,11 @@ nav ul li a {
   font-size: 16px;
   text-decoration: none;
   letter-spacing: 0.04em;
+  font-weight: 500;
 }
 nav ul li a:hover {
   transform: scale(1.1);
-  text-shadow:  .5rem .5rem .5rem white;
+  text-shadow:  0 0 3px white;
   text-decoration: none;
 }
 @media screen and (max-width: 560px) {
@@ -167,7 +168,6 @@ main {
   flex-wrap: wrap;
   flex-direction: row;
 }
-
 main h1 {
   text-align: center;
   margin-top: 1rem;
@@ -176,19 +176,21 @@ main h1 {
 }
 .cards h1 {
   width: 100%;
+  font-size: 3rem;
+  padding-top: 2rem;
 }
 .cards {
   display: flex;
   background-color: rgba(61, 53, 53, 0.877);
-  border-radius: 20px;
+  border-radius: 15px;
   width: 100%;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
 }
 .card {
-  background-color: #fff;
-  border-radius: 10%;
+  background-color: rgba(255, 255, 255, 0.966);
+  border-radius: 5%;
   width: 250px;
   height: 350px;
   display: flex;
@@ -196,7 +198,7 @@ main h1 {
   justify-content: center;
   flex-direction: column;
   transition: 0.5s ease-in-out;
-  margin: 15px 30px 15px 30px;
+  margin: 30px;
 }
 .card2 {
   width: 100%;
@@ -212,7 +214,7 @@ main h1 {
 .card2:hover {
   transform: scale(1.1);
 }
-.card h3 {
+.card h2 {
   text-align: center;
 }
 .card p {
@@ -226,13 +228,14 @@ main h1 {
 .cardTexto {
   width: 50%;
   padding: 1rem;
-  border-radius: 5%;
+  border-radius: 10px;
   background-color: white;
   font-size: 1rem;
+  margin: 1rem;
 }
-.cardTexto h2 {
+.cardTexto h3 {
   padding: 0.2rem;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 400;
 }
 .cards .card .descricao {
@@ -241,52 +244,52 @@ main h1 {
 #editar {
   text-decoration: none;
   color: rgb(251, 251, 251);
-  background-color: rgb(11, 126, 59);
+  background-color: #1e813e;
   font-size: 1rem;
-  font-weight: 800;
+  font-weight: 600;
   width: 50%;
   text-align: center;
   margin-top: 1rem;
-  border: solid 3px rgb(56, 56, 158);
+  padding: .2rem;
+  border: solid 3px #1e813e;
 }
 #editar:hover {
   background-color: rgb(255, 255, 255);
-  color: rgb(11, 126, 59);
+  color: #1e813e;
   font-size: 1rem;
-  font-weight: 800;
-  border: solid 3px rgb(56, 56, 158);
+  font-weight: 600;
+  border: solid 3px #1e813e;
 }
 #deletar {
   text-decoration: none;
   color: rgb(255, 255, 255);
-  background-color: rgb(255, 0, 0);
+  background-color: #99211E;
   font-size: 1rem;
-  font-weight: 800;
+  font-weight: 600;
   width: 50%;
   text-align: center;
   margin-top: 1rem;
-  border: solid 3px rgb(56, 56, 158);
   margin-bottom: 1rem;
+  padding: .2rem;
+  border: solid 3px #99211E;
 }
 #deletar:hover {
   background-color: rgb(253, 253, 253);
-  color: rgb(255, 0, 0);
+  color: #99211E;
   font-size: 1rem;
-  font-weight: 800;
-  border: solid 3px rgb(56, 56, 158);
+  font-weight: 600;
+  border: solid 3px #99211E;
 }
-
 #cadastro {
   display: flex;
   background-color: rgba(61, 53, 53, 0.877);
-  border-radius: 20px;
+  border-radius: 10px;
   width: 100%;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
   padding: 1rem;
 }
-
 #cadastro h2 {
   padding: 1rem;
   text-align: center;
@@ -303,7 +306,6 @@ form {
   align-items: center;
   flex-direction: column;
 }
-
 form input {
   width: 100%;
   margin-bottom: 1rem;
@@ -314,7 +316,6 @@ form label {
   padding: 0.2rem;
   color: #fff;
 }
-
 .botaoCadastro {
   width: 100%;
   display: flex;
@@ -323,15 +324,16 @@ form label {
 .btnCadastrar {
   width: 50%;
   text-decoration: none;
-  border: 2px solid green;
+  border: 2px solid #1e813e;
   background-color: white;
-  color: green;
-  padding: 1rem;
+  color: #1e813e;
+  padding: 0.7rem;
   font-weight: 700;
+  font-size: 1rem;
 }
 .btnCadastrar:hover {
   border: 2px solid white;
-  background-color: green;
+  background-color: #1e813e;
   color: white;
 }
 footer {
@@ -341,6 +343,7 @@ footer {
   flex-direction: column;
   position: absolute;
   bottom: 0;
+  padding: .5rem 0 .5rem 0;
 }
 footer a{
   align-items: center;
@@ -348,37 +351,39 @@ footer a{
   flex-direction: column;
   text-decoration: none;
   color: black;
-  
 }
-
 footer a:hover{
   color: white;
 }
 footer p{
   text-align: center;
 }
-
 #scarletViolet {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
+  background-color: #181818a6;
+  border-radius: 10px;
+  padding: 2rem 3rem 3rem 2rem;
 }
 #tituloCuriosidade {
   font-size: 2rem;
   text-align: center;
-  padding: 1rem 0 1rem 0;
+  padding: 3rem 0 1rem 0;
   width: 100%;
-  background-color: #18181859;
+  background-color: #ffffff77;
   color: #080808;
-  text-shadow: 0.5rem 0.5rem 0.5rem #a10505;
+  text-shadow: 0 0 6px #FF0000, 0 0 7px #0000FF;
 }
 .texto1 {
   width: 100%;
   text-align: center;
   padding: 1rem 0 1rem 0;
   font-size: 1.2rem;
+  font-weight: 400;
+  color: #fff;
 }
 #video {
   display: flex;
@@ -400,4 +405,5 @@ footer p{
 }
 .imgCuriosidade figcaption {
   text-align: center;
+  color: #fff;
 }
