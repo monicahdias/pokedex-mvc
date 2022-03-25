@@ -67,4 +67,4 @@ Estilize toda a view index.ejs para receber os dados do array, porém só adicio
 #
 Crie um menu para navegar entre as rotas;
 #
-Projeto feito em dupla com Monica H. Dias.
+Projeto feito em dupla com Kellbber Barcarolo.
