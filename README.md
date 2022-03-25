@@ -1,4 +1,4 @@
-# PROJETO POKEDEX 
+# PROJETO POKÉDEX 
 #
 # DEPLOY -> https://deploy-kb-pokedex.herokuapp.com/
 #
